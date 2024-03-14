@@ -1,7 +1,7 @@
 # alx_capstone_project: Note Taking Application
 
 ## Project Overview:
-The Note Taking Application is a web-based platform designed to help users create, edit, organize and manage their notes effectively. Whether it's jotting down quick thoughts, keeping track of important tasks, or storing valuable information, this application provides users with a convenient way to create, edit, and organize their notes.
+My Note Application is a web-based platform designed to help users create, edit, organize and manage their notes effectively. Whether it's jotting down quick thoughts, keeping track of important tasks, or storing valuable information, this application provides users with a convenient way to create, edit, and organize their notes.
 
 ## Features and Functionality:
 - **Create Notes:** Users can create new notes by providing a title and content for each note.
