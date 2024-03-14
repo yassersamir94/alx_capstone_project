@@ -21,7 +21,7 @@ The Note Taking Application is built using the following technologies:
 - MySQL
 
 ## Screenshots or Demo:
-
+here
 
 ## Roadmap and Future Enhancements:
 - Implement user registration and login functionality for personalized note management.
