@@ -34,4 +34,4 @@ The Note Taking Application is built using the following technologies:
 - **Name:** [Yasser Samir]
 - **Email:** [yassersamir.94@hotmail.com]
 - **GitHub:** [https://github.com/yassersamir94]
-- **LinkedIn:** [www.linkedin.com/in/yasser-samir-963a6719a]
+- **LinkedIn:** [https://www.linkedin.com/in/yasser-samir-963a6719a/]
