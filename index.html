@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Notes</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Main Header -->
+  <header class="main-header">
+    <div class="logo">
+      <img src="logo.png" alt="My Notes Logo">
+      <h1>My Notes</h1>
+    </div>
+  </header>
+
+  <!-- Secondary Header -->
+  <header class="secondary-header">
+    <button class="menu-icon"><i class="fas fa-bars"></i></button>
+    <div class="add-note-container">
+      <button id="add-note-btn">Add New Note</button>
+    </div>
+    <div class="search-container">
+      <input type="text" placeholder="Search notes..." id="search-notes-input">
+      <button class="search-icon" id="search-notes-btn"><i class="fas fa-search"></i></button>
+    </div>
+  </header>
+
+  <!-- Add New Note Form -->
+  <div class="add-note-form-container hidden" id="add-note-form-container">
+    <form id="add-note-form">
+      <input type="text" placeholder="Enter title..." id="add-note-title" name="add-note-title" required>
+      <input type="file" id="file-upload" accept="image/*, .pdf, .doc, .docx, .txt" multiple>
+      <div id="editor-container" style="height: 200px;"></div> <!-- CKEditor container -->
+      <div id="empty-title-message" class="empty-message hidden">Please fill out this field</div>
+      <div id="empty-content-message" class="empty-message hidden">Please fill out this field</div>
+      <button type="submit" id="save-note-btn" class="save-btn">Save</button>
+      <button type="button" id="cancel-note-btn" class="form-btn cancel-btn">Cancel</button> <!-- Cancel button -->
+    </form>
+  </div>  
+
+  <!-- Displayed Notes -->
+  <div id="displayed-notes-container" class="notes-container"></div>
+
+  <!-- Sort Options -->
+  <div id="sort-options-container" class="sort-options-container">
+    <label for="sort-options">Sort by:</label>
+    <select id="sort-options">
+      <option value="date">Date</option>
+      <option value="title">Title</option>
+    </select>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

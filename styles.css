@@ -1,0 +1,169 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main Header styles */
+.main-header {
+    background-color: #4CAF50; /* Green background color */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Padding */
+    border-top-left-radius: 15px; /* Rounded top left corner */
+    border-top-right-radius: 15px; /* Rounded top right corner */
+    margin-bottom: 15px; /* Add margin to create space between containers */
+}
+
+.main-header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.main-header img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.main-header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Secondary Header styles */
+.secondary-header {
+    background-color: #333; /* Dark gray background color */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Padding */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Align items with space between */
+    align-items: center; /* Align items vertically */
+}
+
+.secondary-header .menu-icon,
+.secondary-header .search-icon {
+    background-color: transparent; /* Transparent background */
+    border: none; /* No border */
+    cursor: pointer; /* Use pointer cursor */
+}
+
+.secondary-header .menu-icon i,
+.secondary-header .search-icon i {
+    font-size: 20px; /* Icon size */
+}
+
+.secondary-header .add-note-container button {
+    background-color: #4CAF50; /* Green button background color */
+    border: none; /* No border */
+    color: #fff; /* White text color */
+    cursor: pointer; /* Use pointer cursor */
+    padding: 10px 100px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 17px; /* Font size */
+}
+
+.secondary-header .options-container select {
+    padding: 8px; /* Padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    margin-right: 10px; /* Add spacing between select and search input */
+}
+
+.secondary-header .search-container input[type="text"] {
+    width: 200px; /* Width of the search input field */
+    padding: 8px; /* Padding */
+    border: none; /* No border */
+    border-radius: 15px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    margin-right: 10px; /* Add spacing between input field and button */
+}
+
+/* Note styles */
+.note-container {
+    background-color: #f2f2f2;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    position: relative; /* Set position relative for absolute positioning */
+}
+
+.note-container h2 {
+    margin-bottom: 5px;
+}
+
+.note-container .dates {
+    color: #666;
+    font-size: 14px;
+}
+
+.note-container .edit-btn,
+.note-container .delete-btn {
+    position: absolute;
+    padding: 10px; /* Adjust padding for buttons */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.note-container .edit-btn {
+    background-color: #007bff; /* Blue button background color */
+    color: #fff; /* White text color */
+    right: 10px; /* Adjust right position for Edit button */
+    top: 10px; /* Adjust top position */
+}
+
+.note-container .delete-btn {
+    background-color: #dc3545; /* Red button background color */
+    color: #fff; /* White text color */
+    right: 10px; /* Adjust right position for Delete button */
+    top: 50px; /* Adjust top position for Delete button */
+}
+
+/* Hide the note form initially */
+.note-form-container {
+    display: none;
+}
+
+.empty-message {
+    color: red; /* Red text color */
+    font-size: 14px; /* Font size */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.edit-btn {
+    background-color: #007bff; /* Blue button background color */
+    color: #fff; /* White text color */
+    margin-right: 5px;
+}
+
+.delete-btn {
+    background-color: #dc3545; /* Red button background color */
+    color: #fff; /* White text color */
+    margin-right: 5px;
+}
+
+.save-btn {
+    background-color: #28a745; /* Green button background color */
+    color: #fff; /* White text color */
+    margin-right: 5px;
+}
+
+.cancel-btn {
+    background-color: #dc3545; /* Red button background color */
+    color: #fff; /* White text color */
+}
