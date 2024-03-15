@@ -28,29 +28,36 @@
     </div>
   </header>
 
-  <!-- Add New Note Form -->
-  <div class="add-note-form-container hidden" id="add-note-form-container">
-    <form id="add-note-form">
-      <input type="text" placeholder="Enter title..." id="add-note-title" name="add-note-title" required>
-      <input type="file" id="file-upload" accept="image/*, .pdf, .doc, .docx, .txt" multiple>
-      <div id="editor-container" style="height: 200px;"></div> <!-- CKEditor container -->
-      <div id="empty-title-message" class="empty-message hidden">Please fill out this field</div>
-      <div id="empty-content-message" class="empty-message hidden">Please fill out this field</div>
-      <button type="submit" id="save-note-btn" class="save-btn">Save</button>
-      <button type="button" id="cancel-note-btn" class="form-btn cancel-btn">Cancel</button> <!-- Cancel button -->
-    </form>
-  </div>  
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Sort Options</h2>
+    <div id="sort-options-container" class="sort-options-container">
+      <label for="sort-options">Sort by:</label>
+      <select id="sort-options">
+        <option value="date">Date</option>
+        <option value="title">Title</option>
+      </select>
+    </div>
+    <!-- Add more sidebar content or options here -->
+  </div>
 
-  <!-- Displayed Notes -->
-  <div id="displayed-notes-container" class="notes-container"></div>
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Add New Note Form -->
+    <div class="add-note-form-container hidden" id="add-note-form-container">
+      <form id="add-note-form">
+        <input type="text" placeholder="Enter title..." id="add-note-title" name="add-note-title" required>
+        <input type="file" id="file-upload" accept="image/*, .pdf, .doc, .docx, .txt" multiple>
+        <div id="editor-container" style="height: 200px;"></div> <!-- CKEditor container -->
+        <div id="empty-title-message" class="empty-message hidden">Please fill out this field</div>
+        <div id="empty-content-message" class="empty-message hidden">Please fill out this field</div>
+        <button type="submit" id="save-note-btn" class="save-btn">Save</button>
+        <button type="button" id="cancel-note-btn" class="form-btn cancel-btn">Cancel</button> <!-- Cancel button -->
+      </form>
+    </div>  
 
-  <!-- Sort Options -->
-  <div id="sort-options-container" class="sort-options-container">
-    <label for="sort-options">Sort by:</label>
-    <select id="sort-options">
-      <option value="date">Date</option>
-      <option value="title">Title</option>
-    </select>
+    <!-- Displayed Notes -->
+    <div id="displayed-notes-container" class="notes-container"></div>
   </div>
 
   <!-- JavaScript -->

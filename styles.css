@@ -80,6 +80,36 @@
     margin-right: 10px; /* Add spacing between input field and button */
 }
 
+/* Sidebar Panel styles */
+.sidebar {
+    position: fixed; /* Fixed positioning to stay in place */
+    top: 140px; /* Distance from the top, adjusted to match spacing */
+    left: 0; /* Stick to the left */
+    width: 250px; /* Width of the sidebar */
+    height: calc(100vh - 140px); /* Full height, adjusted to match spacing */
+    background-color: #4CAF50; /* Dark gray background color */
+    padding: 20px; /* Padding */
+    color: #fff; /* White text color */
+}
+
+/* Sidebar Link styles */
+.sidebar a {
+    display: block; /* Display links as blocks */
+    color: #fff; /* White text color */
+    padding: 10px 0; /* Padding */
+    text-decoration: none; /* No underline */
+}
+
+.sidebar a:hover {
+    background-color: #555; /* Darker background color on hover */
+}
+
+/* Main content styles */
+.main-content {
+    margin-left: 270px; /* Adjust margin to create space for sidebar */
+    padding: 20px; /* Padding */
+}
+
 /* Note styles */
 .note-container {
     background-color: #f2f2f2;
@@ -165,5 +195,25 @@ button {
 
 .cancel-btn {
     background-color: #dc3545; /* Red button background color */
+    color: #fff; /* White text color */
+}
+
+/* Sort Options */
+#sort-options-container {
+    margin-top: 20px; /* Add space between secondary header and sort options */
+}
+
+#sort-options-container label {
+    color: #fff; /* White text color */
+    font-size: 16px; /* Font size */
+    margin-right: 10px; /* Add spacing */
+}
+
+#sort-options {
+    padding: 8px; /* Padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    background-color: #474747; /* Green background color */
     color: #fff; /* White text color */
 }
