@@ -58,14 +58,6 @@
     font-size: 17px;
 }
 
-.secondary-header .options-container select {
-    padding: 8px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    margin-right: 10px;
-}
-
 .secondary-header .search-container input[type="text"] {
     width: 200px;
     padding: 8px;
