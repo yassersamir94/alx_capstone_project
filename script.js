@@ -29,8 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
         addNoteFormContainer.classList.remove("hidden");
         editingNote = null;
         editor.setData('');
-        emptyContentMessage.classList.add("hidden");
-        emptyTitleMessage.classList.add("hidden");
     });
 
     // Add Note Form Submission Event
