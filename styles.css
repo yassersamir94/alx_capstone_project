@@ -127,11 +127,6 @@
     top: 50px;
 }
 
-/* Hide Note Form Initially */
-.note-form-container {
-    display: none;
-}
-
 /* Empty Message */
 .empty-message {
     color: red;
