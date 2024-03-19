@@ -82,7 +82,7 @@
 
 /* Sidebar Panel styles */
 .sidebar {
-    position: fixed; /* Fixed positioning to stay in place */
+    position: absolute; /* absolute positioning to stay in place */
     top: 140px; /* Distance from the top, adjusted to match spacing */
     left: 0; /* Stick to the left */
     width: 250px; /* Width of the sidebar */
