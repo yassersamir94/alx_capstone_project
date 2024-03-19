@@ -1,18 +1,16 @@
-/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Main Header styles */
 .main-header {
-    background-color: #4CAF50; /* Green background color */
-    color: #fff; /* White text color */
-    padding: 10px 20px; /* Padding */
-    border-top-left-radius: 15px; /* Rounded top left corner */
-    border-top-right-radius: 15px; /* Rounded top right corner */
-    margin-bottom: 15px; /* Add margin to create space between containers */
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-bottom: 15px;
 }
 
 .main-header .logo {
@@ -31,92 +29,87 @@
     margin: 0;
 }
 
-/* Secondary Header styles */
 .secondary-header {
-    background-color: #333; /* Dark gray background color */
-    color: #fff; /* White text color */
-    padding: 10px 20px; /* Padding */
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Align items with space between */
-    align-items: center; /* Align items vertically */
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .secondary-header .menu-icon,
 .secondary-header .search-icon {
-    background-color: transparent; /* Transparent background */
-    border: none; /* No border */
-    cursor: pointer; /* Use pointer cursor */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 .secondary-header .menu-icon i,
 .secondary-header .search-icon i {
-    font-size: 20px; /* Icon size */
+    font-size: 20px;
 }
 
 .secondary-header .add-note-container button {
-    background-color: #4CAF50; /* Green button background color */
-    border: none; /* No border */
-    color: #fff; /* White text color */
-    cursor: pointer; /* Use pointer cursor */
-    padding: 10px 100px; /* Padding */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 17px; /* Font size */
+    background-color: #4CAF50;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 100px;
+    border-radius: 5px;
+    font-size: 17px;
 }
 
 .secondary-header .options-container select {
-    padding: 8px; /* Padding */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px; /* Font size */
-    margin-right: 10px; /* Add spacing between select and search input */
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
 }
 
 .secondary-header .search-container input[type="text"] {
-    width: 200px; /* Width of the search input field */
-    padding: 8px; /* Padding */
-    border: none; /* No border */
-    border-radius: 15px; /* Rounded corners */
-    font-size: 16px; /* Font size */
-    margin-right: 10px; /* Add spacing between input field and button */
+    width: 200px;
+    padding: 8px;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    margin-right: 10px;
 }
 
-/* Sidebar Panel styles */
 .sidebar {
-    position: absolute; /* absolute positioning to stay in place */
-    top: 140px; /* Distance from the top, adjusted to match spacing */
-    left: 0; /* Stick to the left */
-    width: 250px; /* Width of the sidebar */
-    height: calc(100vh - 140px); /* Full height, adjusted to match spacing */
-    background-color: #4CAF50; /* Dark gray background color */
-    padding: 20px; /* Padding */
-    color: #fff; /* White text color */
+    position: absolute;
+    top: 140px;
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 140px);
+    background-color: #4CAF50;
+    padding: 20px;
+    color: #fff;
 }
 
-/* Sidebar Link styles */
 .sidebar a {
-    display: block; /* Display links as blocks */
-    color: #fff; /* White text color */
-    padding: 10px 0; /* Padding */
-    text-decoration: none; /* No underline */
+    display: block;
+    color: #fff;
+    padding: 10px 0;
+    text-decoration: none;
 }
 
 .sidebar a:hover {
-    background-color: #555; /* Darker background color on hover */
+    background-color: #555;
 }
 
-/* Main content styles */
 .main-content {
-    margin-left: 270px; /* Adjust margin to create space for sidebar */
-    padding: 20px; /* Padding */
+    margin-left: 270px;
+    padding: 20px;
 }
 
-/* Note styles */
 .note-container {
     background-color: #f2f2f2;
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 5px;
-    position: relative; /* Set position relative for absolute positioning */
+    position: relative;
 }
 
 .note-container h2 {
@@ -131,7 +124,7 @@
 .note-container .edit-btn,
 .note-container .delete-btn {
     position: absolute;
-    padding: 10px; /* Adjust padding for buttons */
+    padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -139,34 +132,32 @@
 }
 
 .note-container .edit-btn {
-    background-color: #007bff; /* Blue button background color */
-    color: #fff; /* White text color */
-    right: 10px; /* Adjust right position for Edit button */
-    top: 10px; /* Adjust top position */
+    background-color: #007bff;
+    color: #fff;
+    right: 10px;
+    top: 10px;
 }
 
 .note-container .delete-btn {
-    background-color: #dc3545; /* Red button background color */
-    color: #fff; /* White text color */
-    right: 10px; /* Adjust right position for Delete button */
-    top: 50px; /* Adjust top position for Delete button */
+    background-color: #dc3545;
+    color: #fff;
+    right: 10px;
+    top: 50px;
 }
 
-/* Hide the note form initially */
 .note-form-container {
     display: none;
 }
 
 .empty-message {
-    color: red; /* Red text color */
-    font-size: 14px; /* Font size */
+    color: red;
+    font-size: 14px;
 }
 
 .hidden {
     display: none;
 }
 
-/* Button styles */
 button {
     padding: 10px 20px;
     border: none;
@@ -176,44 +167,43 @@ button {
 }
 
 .edit-btn {
-    background-color: #007bff; /* Blue button background color */
-    color: #fff; /* White text color */
+    background-color: #007bff;
+    color: #fff;
     margin-right: 5px;
 }
 
 .delete-btn {
-    background-color: #dc3545; /* Red button background color */
-    color: #fff; /* White text color */
+    background-color: #dc3545;
+    color: #fff;
     margin-right: 5px;
 }
 
 .save-btn {
-    background-color: #28a745; /* Green button background color */
-    color: #fff; /* White text color */
+    background-color: #28a745;
+    color: #fff;
     margin-right: 5px;
 }
 
 .cancel-btn {
-    background-color: #dc3545; /* Red button background color */
-    color: #fff; /* White text color */
+    background-color: #dc3545;
+    color: #fff;
 }
 
-/* Sort Options */
 #sort-options-container {
-    margin-top: 20px; /* Add space between secondary header and sort options */
+    margin-top: 20px;
 }
 
 #sort-options-container label {
-    color: #fff; /* White text color */
-    font-size: 16px; /* Font size */
-    margin-right: 10px; /* Add spacing */
+    color: #fff;
+    font-size: 16px;
+    margin-right: 10px;
 }
 
 #sort-options {
-    padding: 8px; /* Padding */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px; /* Font size */
-    background-color: #474747; /* Green background color */
-    color: #fff; /* White text color */
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #474747;
+    color: #fff;
 }
