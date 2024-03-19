@@ -12,8 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const emptyTitleMessage = document.getElementById("empty-title-message");
     const emptyContentMessage = document.getElementById("empty-content-message");
     const fileUploadInput = document.getElementById("file-upload");
-    let editingNote = null;
-    let notes = [];
 
     // Load CKEditor library
     const editor = CKEDITOR.replace('editor-container', {
