@@ -34,7 +34,7 @@
 .secondary-header {
     background-color: #333;
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,13 +43,9 @@
 .secondary-header .menu-icon,
 .secondary-header .search-icon {
     background-color: transparent;
+    font-size: 20px;
     border: none;
     cursor: pointer;
-}
-
-.secondary-header .menu-icon i,
-.secondary-header .search-icon i {
-    font-size: 20px;
 }
 
 .secondary-header .add-note-container button {
