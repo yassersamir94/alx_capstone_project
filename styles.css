@@ -11,7 +11,7 @@
     padding: 10px 20px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .main-header .logo {
@@ -38,6 +38,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .secondary-header .menu-icon,
@@ -70,20 +71,12 @@
 /* Sidebar Panel */
 .sidebar {
     position: absolute;
-    top: 140px;
     left: 0;
     width: 250px;
     height: calc(100vh - 140px);
     background-color: #4CAF50;
     padding: 20px;
     color: #fff;
-}
-
-.sidebar a {
-    display: block;
-    color: #fff;
-    padding: 10px 0;
-    text-decoration: none;
 }
 
 /* Main Content */
