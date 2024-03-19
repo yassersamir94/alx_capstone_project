@@ -1,4 +1,6 @@
+// Module: Event Listener Registration
 document.addEventListener("DOMContentLoaded", function () {
+    // Module: DOM Element Selection
     const addNoteBtn = document.getElementById("add-note-btn");
     const addNoteFormContainer = document.getElementById("add-note-form-container");
     const addNoteForm = document.getElementById("add-note-form");
@@ -13,15 +15,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const emptyContentMessage = document.getElementById("empty-content-message");
     const fileUploadInput = document.getElementById("file-upload");
 
-    // Load CKEditor library
+    // Module: CKEditor Integration
     const editor = CKEDITOR.replace('editor-container', {
         height: 200,
         removePlugins: 'resize'
     });
 
-    // Load notes from local storage when the page loads
+    // Module: Load Notes from Local Storage
     loadNotesFromLocalStorage();
 
+    // Module: Add Note Button Click Event
     addNoteBtn.addEventListener("click", function () {
         addNoteFormContainer.classList.remove("hidden");
         editingNote = null;
@@ -30,11 +33,14 @@ document.addEventListener("DOMContentLoaded", function () {
         emptyTitleMessage.classList.add("hidden");
     });
 
+    // Module: Add Note Form Submission Event
     addNoteForm.addEventListener("submit", function (event) {
         event.preventDefault();
+        // Module: Extract Note Title and Content
         const newNoteTitle = noteTitleInput.value.trim();
         const newNoteContent = CKEDITOR.instances['editor-container'].getData().trim();
 
+        // Module: Validate Note Title and Content
         if (newNoteTitle === '') {
             emptyTitleMessage.classList.remove("hidden");
             return;
@@ -49,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
             emptyContentMessage.classList.add("hidden");
         }
 
+        // Module: Create New Note Object
         const newNoteCreatedAt = new Date().toLocaleString();
         const newNote = {
             id: editingNote ? editingNote.id : Date.now(),
@@ -58,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
             updatedAt: new Date()
         };
 
+        // Module: Update or Add Note
         if (editingNote) {
             editingNote.title = newNoteTitle;
             editingNote.content = newNoteContent;
@@ -69,16 +77,19 @@ document.addEventListener("DOMContentLoaded", function () {
             displayedNotesContainer.appendChild(createNoteContainer(newNote));
         }
 
+        // Module: File Upload Handling
         const files = fileUploadInput.files;
         for (let i = 0; i < files.length; i++) {
             console.log("Uploaded file:", files[i].name);
         }
 
+        // Module: Reset Add Note Form
         addNoteForm.reset();
         addNoteFormContainer.classList.add("hidden");
         editingNote = null;
     });
 
+    // Module: Cancel Note Button Click Event
     cancelNoteBtn.addEventListener("click", function () {
         addNoteForm.reset();
         addNoteFormContainer.classList.add("hidden");
@@ -86,17 +97,22 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Cancel button clicked");
     });
 
+    // Module: Save Note Button Click Event
     saveNoteBtn.addEventListener("click", function () {
         console.log("Save button clicked");
     });
 
+    // Module: Search Notes Button Click Event
     searchNotesBtn.addEventListener("click", function () {
+        // Module: Extract Search Keyword
         const keyword = searchNotesInput.value.trim().toLowerCase();
 
+        // Module: Remove Existing Highlights
         removeHighlights();
 
         if (keyword === '') return;
 
+        // Module: Search Notes and Highlight Keywords
         notes.forEach(note => {
             const noteContainer = document.querySelector(`.note-container[data-id="${note.id}"]`);
             if (note.title.toLowerCase().includes(keyword)) {
@@ -108,12 +124,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    // Module: Sort Options Select Change Event
     sortOptionsSelect.addEventListener("change", function () {
+        // Module: Sort Notes
         const sortBy = sortOptionsSelect.value;
         sortNotes(sortBy);
     });
 
+    // Module: Sort Notes by Criteria
     function sortNotes(sortBy) {
+        // Module: Switch Sort Criteria
         switch (sortBy) {
             case "title":
                 notes.sort((a, b) => a.title.localeCompare(b.title));
@@ -128,6 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 break;
         }
 
+        // Module: Refresh Displayed Notes
         displayedNotesContainer.innerHTML = '';
 
         notes.forEach(note => {
@@ -135,6 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // Module: Highlight Keyword in Element
     function highlightKeyword(element, keyword) {
         const innerHTML = element.innerHTML;
         const regex = new RegExp(`(${keyword})`, "gi");
@@ -142,7 +164,9 @@ document.addEventListener("DOMContentLoaded", function () {
         element.innerHTML = newInnerHTML;
     }
 
+    // Module: Create Note Container
     function createNoteContainer(note) {
+        // Module: Create HTML Elements for Note Display
         const noteContainer = document.createElement("div");
         noteContainer.classList.add("note-container");
         noteContainer.dataset.id = note.id;
@@ -182,6 +206,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return noteContainer;
     }
 
+    // Module: Update Note in DOM
     function updateNoteInDOM(note) {
         const noteContainer = document.querySelector(`.note-container[data-id="${note.id}"]`);
         if (noteContainer) {
@@ -196,6 +221,7 @@ document.addEventListener("DOMContentLoaded", function () {
         saveNotesToLocalStorage();
     }
 
+    // Module: Handle Edit Note
     function handleEdit(note) {
         editingNote = note;
         noteTitleInput.value = note.title;
@@ -203,6 +229,7 @@ document.addEventListener("DOMContentLoaded", function () {
         addNoteFormContainer.classList.remove("hidden");
     }
 
+    // Module: Handle Delete Note
     function handleDelete(noteContainer, note) {
         const index = notes.findIndex(n => n.id === note.id);
         if (index !== -1) {
@@ -212,10 +239,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // Module: Save Notes to Local Storage
     function saveNotesToLocalStorage() {
         localStorage.setItem("notes", JSON.stringify(notes));
     }
 
+    // Module: Load Notes from Local Storage
     function loadNotesFromLocalStorage() {
         const storedNotes = localStorage.getItem("notes");
         if (storedNotes) {
@@ -226,6 +255,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // Module: Remove Highlights from Notes
     function removeHighlights() {
         const highlightedElements = displayedNotesContainer.querySelectorAll('.highlighted');
         highlightedElements.forEach(span => {
