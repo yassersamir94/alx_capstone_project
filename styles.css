@@ -95,10 +95,6 @@
     text-decoration: none;
 }
 
-.sidebar a:hover {
-    background-color: #555;
-}
-
 .main-content {
     margin-left: 270px;
     padding: 20px;
