@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* Main Header */
 .main-header {
     background-color: #4CAF50;
     color: #fff;
@@ -29,6 +30,7 @@
     margin: 0;
 }
 
+/* Secondary Header */
 .secondary-header {
     background-color: #333;
     color: #fff;
@@ -77,6 +79,7 @@
     margin-right: 10px;
 }
 
+/* Sidebar Panel */
 .sidebar {
     position: absolute;
     top: 140px;
@@ -95,11 +98,13 @@
     text-decoration: none;
 }
 
+/* Main Content */
 .main-content {
     margin-left: 270px;
     padding: 20px;
 }
 
+/* Note Container*/
 .note-container {
     background-color: #f2f2f2;
     padding: 15px;
@@ -141,19 +146,23 @@
     top: 50px;
 }
 
+/* Hide Note Form Initially */
 .note-form-container {
     display: none;
 }
 
+/* Empty Message */
 .empty-message {
     color: red;
     font-size: 14px;
 }
 
+/* Hidden Element */
 .hidden {
     display: none;
 }
 
+/* Button */
 button {
     padding: 10px 20px;
     border: none;
@@ -185,10 +194,12 @@ button {
     color: #fff;
 }
 
+/* Sort Options Container */
 #sort-options-container {
     margin-top: 20px;
 }
 
+/* Sort Options */
 #sort-options-container label {
     color: #fff;
     font-size: 16px;
