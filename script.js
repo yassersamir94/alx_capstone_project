@@ -75,12 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
             displayedNotesContainer.appendChild(createNoteContainer(newNote));
         }
 
-        // File Upload Handling
-        const files = fileUploadInput.files;
-        for (let i = 0; i < files.length; i++) {
-            console.log("Uploaded file:", files[i].name);
-        }
-
         // Reset Add Note Form
         addNoteForm.reset();
         addNoteFormContainer.classList.add("hidden");
