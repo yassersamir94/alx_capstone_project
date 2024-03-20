@@ -12,7 +12,7 @@ My Notes Application is a web-based platform designed to help users create, edit
 - **User Authentication:** Secure user authentication ensures that each user's notes are private and accessible only to them.
 
 ## Technologies Used:
-The Note Taking Application is built using the following technologies:
+My Notes Web Application is built using the following technologies:
 - HTML
 - CSS
 - JavaScript
