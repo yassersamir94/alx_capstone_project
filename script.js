@@ -116,6 +116,22 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    // Highlight Keyword in Element
+    function highlightKeyword(element, keyword) {
+        const innerHTML = element.innerHTML;
+        const regex = new RegExp(`(${keyword})`, "gi");
+        const newInnerHTML = innerHTML.replace(regex, '<span class="highlighted" style="background-color: yellow;">$1</span>');
+        element.innerHTML = newInnerHTML;
+    }
+
+    // Remove Highlights from Notes
+    function removeHighlights() {
+        const highlightedElements = displayedNotesContainer.querySelectorAll('.highlighted');
+        highlightedElements.forEach(span => {
+            span.outerHTML = span.innerHTML;
+        });
+    }
+
     // Sort Options Select Change Event
     sortOptionsSelect.addEventListener("change", function () {
         // Module: Sort Notes
@@ -146,14 +162,6 @@ document.addEventListener("DOMContentLoaded", function () {
         notes.forEach(note => {
             displayedNotesContainer.appendChild(createNoteContainer(note));
         });
-    }
-
-    // Highlight Keyword in Element
-    function highlightKeyword(element, keyword) {
-        const innerHTML = element.innerHTML;
-        const regex = new RegExp(`(${keyword})`, "gi");
-        const newInnerHTML = innerHTML.replace(regex, '<span class="highlighted" style="background-color: yellow;">$1</span>');
-        element.innerHTML = newInnerHTML;
     }
 
     // Create Note Container
@@ -245,13 +253,5 @@ document.addEventListener("DOMContentLoaded", function () {
                 displayedNotesContainer.appendChild(createNoteContainer(note));
             });
         }
-    }
-
-    // Remove Highlights from Notes
-    function removeHighlights() {
-        const highlightedElements = displayedNotesContainer.querySelectorAll('.highlighted');
-        highlightedElements.forEach(span => {
-            span.outerHTML = span.innerHTML;
-        });
     }
 });
