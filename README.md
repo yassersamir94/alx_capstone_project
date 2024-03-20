@@ -16,9 +16,6 @@ The Note Taking Application is built using the following technologies:
 - HTML
 - CSS
 - JavaScript
-- Python
-- Flask
-- MySQL
 
 ## Screenshots or Demo:
 here
